@@ -30,11 +30,31 @@ CREATE TABLE application (
     url VARCHAR NOT NULL
 );
 
+     CREATE TABLE admin (
+     admin_id SERIAL PRIMARY KEY,
+     username VARCHAR(30) NOT NULL,
+     password VARCHAR(30) NOT NULL,
+     email VARCHAR(60) NOT NULL,
+	first_name VARCHAR NOT NULL,
+	last_name VARCHAR NOT NULL,
+	phone_no VARCHAR(60) NOT NULL,
+	role VARCHAR NOT NULL
+);
+
+     CREATE TABLE Client (
+     client_id SERIAL PRIMARY KEY,
+     username VARCHAR(30) NOT NULL,
+     password VARCHAR(30) NOT NULL,
+     email VARCHAR(60) NOT NULL,
+	first_name VARCHAR NOT NULL,
+	last_name VARCHAR NOT NULL,
+	phone_no VARCHAR(60) NOT NULL,
+	company VARCHAR NULL
+);
 
 CREATE TABLE Mobile_Dashboard(
     mob_did SERIAL PRIMARY KEY,
-    
-    name VARCHAR(30) NOT NULL,
+     name VARCHAR(30) NOT NULL,
 	belongs_to INTEGER references client(client_id),
 	dashboard_type char(3) NOT NULL,    --mob or web-- 
 	widget_list INTEGER NOT NULL
@@ -85,24 +105,4 @@ CREATE TABLE log (
 	geoContinentName VARCHAR NOT NULL
 );
 
-CREATE TABLE admin (
-    admin_id SERIAL PRIMARY KEY,
-    username VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    email VARCHAR(60) NOT NULL,
-	first_name VARCHAR NOT NULL,
-	last_name VARCHAR NOT NULL,
-	phone_no VARCHAR(60) NOT NULL,
-	role VARCHAR NOT NULL
-);
 
-CREATE TABLE Client (
-    client_id SERIAL PRIMARY KEY,
-    username VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NOT NULL,
-    email VARCHAR(60) NOT NULL,
-	first_name VARCHAR NOT NULL,
-	last_name VARCHAR NOT NULL,
-	phone_no VARCHAR(60) NOT NULL,
-	company VARCHAR NULL
-);
