@@ -68,7 +68,19 @@ CREATE TABLE Web_Dashboard(
 	widget_list INTEGER NOT NULL
 	);
 	
-	
+CREATE TABLE alert (
+alert_id SERIAL PRIMARY KEY,
+type VARCHAR NOT NULL,
+description VARCHAR NOT NULL,
+timeTriggered timestamp not null,
+app_id INTEGER NOT NULL,
+server_id INTEGER NOT NULL,
+threshold DECIMAL NOT NULL,
+viewed_or_not BOOLEAN NOT NULL,
+solved_or_not BOOLEAN NOT NULL,
+severity_level VARCHAR(20) NOT NULL
+);
+
 CREATE TABLE report (
     report_id SERIAL PRIMARY KEY,
     report_name VARCHAR(255) NOT NULL,
@@ -76,6 +88,15 @@ CREATE TABLE report (
 	email varchar(60) NOT NULL,
 	enabling BOOLEAN NOT NULL,
 	issued TIMESTAMP NOT NULL 
+);
+
+CREATE TABLE chat (
+chat_id SERIAL PRIMARY KEY,
+client_id INTEGER NOT NULL,
+admin_id INTEGER NOT NULL,
+sender_name VARCHAR NOT NULL,
+reciever_name VARCHAR NOT NULL,
+message TEXT NOT NULL
 );
 
 CREATE TABLE performance_metric(
