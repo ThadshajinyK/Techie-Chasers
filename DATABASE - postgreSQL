@@ -29,3 +29,20 @@ CREATE TABLE application (
     date_created TIMESTAMP NOT NULL,
     url VARCHAR NOT NULL
 );
+
+
+CREATE TABLE Mobile_Dashboard(
+    mob_did SERIAL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+	belongs_to INTEGER references client(client_id),
+	dashboard_type char(3) NOT NULL,    --mob or web-- 
+	widget_list INTEGER NOT NULL
+	);
+
+CREATE TABLE Web_Dashboard(
+    web_did SERIAL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+	belongs_to INTEGER references admin(admin_id),
+	dashboard_type char(3) NOT NULL,    --mob or web-- 
+	widget_list INTEGER NOT NULL
+	);
