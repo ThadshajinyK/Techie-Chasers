@@ -46,3 +46,13 @@ CREATE TABLE Web_Dashboard(
 	dashboard_type char(3) NOT NULL,    --mob or web-- 
 	widget_list INTEGER NOT NULL
 	);
+	
+	
+CREATE TABLE report (
+    report_id SERIAL PRIMARY KEY,
+    report_name VARCHAR(255) NOT NULL,
+    server_instance_id INTEGER REFERENCES server_instance(instanceid),
+	email varchar(60) NOT NULL,
+	enabling BOOLEAN NOT NULL,
+	issued TIMESTAMP NOT NULL 
+);
