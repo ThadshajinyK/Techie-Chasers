@@ -1,0 +1,31 @@
+CREATE TABLE Server(
+	serverid SERIAL PRIMARY KEY,
+	host_name VARCHAR(30) NOT NULL,
+	ip_address VARCHAR(30) NOT NULL,
+	status VARCHAR(30) NOT NULL,
+	server_location VARCHAR(30) NOT NULL,
+	cpu DECIMAL NOT NULL,
+	memory DECIMAL NOT NULL,
+	disk DECIMAL NOT NULL
+);
+
+CREATE TABLE Server_Instance(
+	instanceid SERIAL PRIMARY KEY, 
+	name VARCHAR(30) NOT NULL,
+	IP_address VARCHAR(30) NOT NULL,
+	status VARCHAR(30) NOT NULL,
+	cpu DECIMAL NOT NULL,
+	memory DECIMAL NOT NULL,
+	disk DECIMAL NOT NULL,
+	serverid INTEGER REFERENCES server(serverid)
+);
+CREATE TABLE application (
+    appid SERIAL PRIMARY KEY,
+    instanceid INTEGER REFERENCES server_instance(instanceid),
+    appname VARCHAR(100) NOT NULL,
+    apptype VARCHAR(30) NOT NULL,
+    app_version INTEGER NOT NULL,
+    app_status VARCHAR(20) NOT NULL,
+    date_created TIMESTAMP NOT NULL,
+    url VARCHAR NOT NULL
+);
