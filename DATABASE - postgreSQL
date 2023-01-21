@@ -56,3 +56,31 @@ CREATE TABLE report (
 	enabling BOOLEAN NOT NULL,
 	issued TIMESTAMP NOT NULL 
 );
+
+CREATE TABLE performance_metric(
+    id SERIAL PRIMARY KEY,
+    server_instance_id INTEGER REFERENCES server_instance(instanceid),
+    time_measured TIMESTAMP NOT NULL,
+    cpu_usage DECIMAL NOT NULL,
+    memory_usage DECIMAL NOT NULL,
+    disk_usage DECIMAL NOT NULL,
+    uptime DECIMAL NOT NULL,
+	availability DECIMAL NOT NULL,
+	no_of_sessions INTEGER NOT NULL,
+	thread_usage DECIMAL NOT NULL,
+	response_time DECIMAL NOT NULL,
+	rps DECIMAL NOT NULL
+);
+
+CREATE TABLE log (
+    logid SERIAL NOT NULL, 
+	time_stamp TIMESTAMP NOT NULL, 
+	level VARCHAR(20) NOT NULL,
+	message TEXT NOT NULL,
+	server_instance INTEGER REFERENCES server_instance(instanceid),
+	logOrigType VARCHAR(30) NOT NULL,
+	geoLocation VARCHAR NOT NULL,
+	geoCountryName VARCHAR NOT NULL,
+	geoContinentName VARCHAR NOT NULL
+);
+
