@@ -1,4 +1,6 @@
-
+.App {
+  text-align: center;
+}
 
 .App-logo {
   height: 40vmin;
@@ -10,6 +12,28 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+:root {
+  --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
+  --pink: #50E2CC;
+  --glass: rgba(255, 255, 255, 0.54);
+  --boxShadow: 0px 4px 60px rgb(0 0 0 / 8%);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --activeItem: rgba(4, 244, 208, 0.07);
+  
+}
+
+ .btn-outline-info{
+  --bs-btn-color: #50E2CC!important;
+    --bs-btn-border-color: #50E2CC!important;
+    --bs-btn-hover-bg: #50E2CC!important;
+    --bs-btn-hover-border-color: #50E2CC!important;
+ }
+
 
 .App-header {
   background-color: #282c34;
