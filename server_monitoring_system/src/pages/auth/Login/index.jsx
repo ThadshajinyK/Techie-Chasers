@@ -1,12 +1,14 @@
-/*
+
 import "./styles.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate }from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import { useMediaQuery } from "react-responsive";
 import PublicLayout from "../../../layout/PublicLayout";
 
 const Login = () => {
   const isMobile = useMediaQuery({ query: `(max-width:700px)` });
+  const navigate= useNavigate()
+
 
   return (
     <PublicLayout>
@@ -46,6 +48,12 @@ const Login = () => {
             borderRadius: "20px",
             height: "44px",
             marginTop: !isMobile && "20px",
+
+          }}
+          onClick={()=>{
+            navigate('/dashboard')
+           
+           
           }}
         >
           Login
@@ -53,11 +61,9 @@ const Login = () => {
         <p>
           Don't you have an account?{" "}
           <Link
-            to='/signup'
+            to='/sign-up'
             style={{ color: "#000", fontStyle: "italic" }}
-            onClick={() => {
-              window.location.href = '/signup';
-            }}
+            
           >
             Sign up
           </Link>
@@ -68,4 +74,3 @@ const Login = () => {
 };
 
 export default Login;
-*/
