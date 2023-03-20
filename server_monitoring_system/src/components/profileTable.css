@@ -1,0 +1,40 @@
+.ProfileTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .ProfileTable td {
+    border: 1px solid grey;
+    padding: 10px;
+  }
+  
+  .ProfileTable__label {
+    font-weight: bold;
+    text-align: right;
+  }
+  
+  .ProfileTable__value {
+    text-align: left;
+  }
+
+  .genral{
+    border: 0px;
+    width: 100px;
+    padding:5px;
+    margin:0px;
+    background-color: rgba(232, 238, 238, 0.621);
+    border-bottom:solid rgb(37, 138, 189) 3px;
+    border-right: solid rgba(107, 23, 217, 0.268) 0.004rem;
+  }
+  
+  .genralbox{
+    display: flex;
+
+  }
+  
+.profilepic{
+  width: 70px;
+  height: 70px;
+  display: flex;
+
+}
