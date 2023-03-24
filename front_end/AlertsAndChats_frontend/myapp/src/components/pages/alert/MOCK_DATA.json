@@ -1,0 +1,74 @@
+[
+  {
+    "serverID": 1,
+    "Alert Type": "Low Disk Space",
+    "Severity Level": "High",
+    "Time of Occurrence": "2023-02-13 10:30:00",
+    "Description": "Server disk space running low. Available space is below 20%.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 2,
+    "Alert Type": "High CPU Utilization",
+    "Severity Level": "High",
+    "Time of Occurrence": "2023-02-13 11:15:00",
+    "Description": "CPU utilization has exceeded 80% for the last 5 minutes.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 3,
+    "Alert Type": "Memory Leak",
+    "Severity Level": "High",
+    "Time of Occurrence": "2023-02-13 12:00:00",
+    "Description": "Memory usage has increased by 10% in the last hour.",
+    "Status": "Unsolved"
+  },
+  {
+    "serverID": 4,
+    "Alert Type": "Tomcat Service Down",
+    "Severity Level": "high",
+    "Time of Occurrence": "2023-02-13 13:00:00",
+    "Description": "Tomcat service is not responding.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 5,
+    "Alert Type": "High Traffic",
+    "Severity Level": "High",
+    "Time of Occurrence": "2023-02-13 14:00:00",
+    "Description": "Server traffic has exceeded the threshold limit.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 6,
+    "Alert Type": "Database Connection Error",
+    "Severity Level": "High",
+    "Time of Occurrence": "2023-02-13 15:00:00",
+    "Description": "Error connecting to the database.",
+    "Status": "Unsolved"
+  },
+  {
+    "serverID": 7,
+    "Alert Type": "Tomcat Service Restarted",
+    "Severity Level": "Medium",
+    "Time of Occurrence": "2023-02-13 16:00:00",
+    "Description": "Tomcat service has been restarted successfully.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 8,
+    "Alert Type": "Application Error",
+    "Severity Level": "Medium",
+    "Time of Occurrence": "2023-02-13 17:00:00",
+    "Description": "An error has occurred in the application.",
+    "Status": "Solved"
+  },
+  {
+    "serverID": 9,
+    "Alert Type": "Tomcat Service Started",
+    "Severity Level": "Low",
+    "Time of Occurrence": "2023-02-13 18:00:00",
+    "Description": "Tomcat service has started successfully.",
+    "Status": "Solved"
+  }
+]
