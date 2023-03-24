@@ -1,0 +1,6 @@
+/* general tab css */
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 60% 10%;
+}
