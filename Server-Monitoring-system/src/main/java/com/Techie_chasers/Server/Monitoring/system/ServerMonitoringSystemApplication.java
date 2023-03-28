@@ -1,6 +1,5 @@
 package com.Techie_chasers.Server.Monitoring.system;
 
-import com.Techie_chasers.Server.Monitoring.system.model.Server;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
