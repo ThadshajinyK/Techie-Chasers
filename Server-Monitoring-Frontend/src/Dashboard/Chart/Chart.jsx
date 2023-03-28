@@ -20,15 +20,15 @@ function CircularProgressBar() {
       
       <li style={{ width: 100}}>
         <CircularProgressbar value={67} text={`${67}%`} /> 
-        <h4 style={{fontSize:14}} >cpu usage</h4>
+        <h4 style={{fontSize:15}} >cpu usage</h4>
       </li>
       <li style={{ width: 100}}>
         <CircularProgressbar value={81} text={`${81}%`} /> 
-        <h4 style={{fontSize:14}}>memory usage</h4>
+        <h4 style={{fontSize:15}}>memory usage</h4>
       </li>
       <li style={{ width: 100}}>
         <CircularProgressbar value={74} text={`${74}%`} /> 
-        <h4 style={{fontSize:14}}>storage usage</h4>
+        <h4 style={{fontSize:15}}>storage usage</h4>
       </li>
     </ul>
     
